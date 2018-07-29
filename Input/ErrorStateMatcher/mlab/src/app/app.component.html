@@ -1,0 +1,19 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput type="email"
+           placeholder="Email"
+           [formControl]="emailFormControl"
+           [errorStateMatcher]="matcher">
+    <mat-hint>错误立即出现！</mat-hint>
+
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      请输入有效的电子邮件地址
+    </mat-error>
+
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email是<strong>必填项</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+
+<h1>{{emailFormControl.value}}</h1>
