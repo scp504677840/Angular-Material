@@ -1,0 +1,6 @@
+<mat-form-field>
+  <input matInput type="text" placeholder="可清除的输入框" [(ngModel)]="value">
+  <button *ngIf="value" matSuffix mat-icon-button (click)="value = ''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
