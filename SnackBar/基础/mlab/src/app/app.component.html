@@ -1,0 +1,10 @@
+<mat-form-field>
+  <mat-label>Message</mat-label>
+  <input matInput type="text" #value value="hi">
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput type="text" #action value="ok">
+</mat-form-field>
+
+<button mat-button (click)="openSnackBar(value.value, action.value)">Show snack-bar</button>
