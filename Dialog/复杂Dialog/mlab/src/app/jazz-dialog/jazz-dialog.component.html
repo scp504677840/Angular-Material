@@ -1,0 +1,8 @@
+<p>It's Jazz!</p>
+<mat-form-field>
+  <mat-label>How much?</mat-label>
+  <input matInput #howMuch>
+</mat-form-field>
+<p> {{ data.message }} </p>
+<button mat-button type="button" (click)="dialogRef.close(howMuch.value)">Close dialog</button>
+<button mat-button (click)="togglePosition()">Change dimensions</button>
