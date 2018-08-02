@@ -1,0 +1,13 @@
+<ol>
+  <li>
+    <mat-form-field>
+      <input matInput [(ngModel)]="name" placeholder="姓名？">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+  <li *ngIf="animal">
+    你喜欢的动漫是： <i>{{animal}}</i>
+  </li>
+</ol>
