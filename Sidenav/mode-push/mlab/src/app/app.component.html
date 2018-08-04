@@ -1,0 +1,27 @@
+<mat-card style="padding: 0;">
+  <mat-toolbar color="primary">
+    打开与关闭侧边栏
+  </mat-toolbar>
+</mat-card>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav
+               position="start"
+               mode="push"
+               [(opened)]="opened"
+               (openedStart)="events.push('open!')"
+               (closedStart)="events.push('close!')">
+    侧边栏
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p>
+      <mat-checkbox [(ngModel)]="opened">sidenav.open</mat-checkbox>
+    </p>
+    <p>
+      <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+    </p>
+    <p>Events:</p>
+    <div class="example-events">
+      <div *ngFor="let e of events">{{e}}</div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
