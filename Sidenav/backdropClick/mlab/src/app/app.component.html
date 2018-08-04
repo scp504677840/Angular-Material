@@ -1,0 +1,28 @@
+<mat-card style="padding: 0;">
+  <mat-toolbar color="primary">
+    打开与关闭侧边栏
+  </mat-toolbar>
+</mat-card>
+<mat-sidenav-container [hasBackdrop]="true"
+                       (backdropClick)="close('backdropClick')"
+                       class="example-container">
+  <!--
+  disableClose sidenav是否禁用自动关闭
+  -->
+  <mat-sidenav #sidenav
+               [mode]="'over'"
+               [disableClose]="false" (keydown.escape)="close('keydown.escape')">
+    <p>
+      <button mat-button (click)="close('Toggle Button')">
+        Toggle
+      </button>
+    </p>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p>
+      <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+    </p>
+    <p>Closed due to: {{reason}}</p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
