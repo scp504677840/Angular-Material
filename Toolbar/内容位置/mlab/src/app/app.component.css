@@ -1,0 +1,5 @@
+.example-fill-remaining-space {
+  /* 这通过使用flexbox填充剩余空间。
+  每个工具栏行都使用flexbox行布局。*/
+  flex: 1 1 auto;
+}
