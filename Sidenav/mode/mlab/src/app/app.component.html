@@ -1,0 +1,37 @@
+<mat-card style="padding: 0;">
+  <mat-toolbar color="primary">
+    打开与关闭侧边栏
+  </mat-toolbar>
+</mat-card>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav
+               [mode]="mode.value">
+    <p>
+      <button mat-button (click)="sidenav.toggle()">
+        sidenav.toggle()
+      </button>
+    </p>
+    <p>
+      <mat-radio-group class="example-radio-group" [formControl]="mode">
+        <mat-label>Mode:</mat-label>
+        <mat-radio-button value="over">Over</mat-radio-button>
+        <mat-radio-button value="side">Side</mat-radio-button>
+        <mat-radio-button value="push">Push</mat-radio-button>
+      </mat-radio-group>
+    </p>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p>
+      <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+    </p>
+    <p>
+      <mat-radio-group class="example-radio-group" [formControl]="mode">
+        <mat-label>Mode:</mat-label>
+        <mat-radio-button value="over">Over</mat-radio-button>
+        <mat-radio-button value="side">Side</mat-radio-button>
+        <mat-radio-button value="push">Push</mat-radio-button>
+      </mat-radio-group>
+    </p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
