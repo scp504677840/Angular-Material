@@ -1,0 +1,13 @@
+/* css resets */
+@import "~normalize.css";
+/*
+deeppurple-amber.css
+indigo-pink.css
+pink-bluegrey.css
+purple-green.css
+*/
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+* {
+    font-family: Roboto, monospace;
+}
